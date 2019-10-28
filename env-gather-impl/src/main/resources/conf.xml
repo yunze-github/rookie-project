@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<environment>
+	<gather class="com.briup.env.client.GatherImpl">
+		<dataFile>backup/data-file1</dataFile>
+		<gatherCount>backup/length.bak</gatherCount>
+	</gather>
+
+	<client class="com.briup.env.client.ClientImpl">
+		<port>8099</port>
+		<ip>127.0.0.1</ip>
+	</client>
+
+	<logger class="com.briup.env.util.LogImpl"></logger>
+
+	<backup class="com.briup.env.util.BackupImpl"></backup>
+
+	<server class="com.briup.env.server.ServerImpl">
+		<serverport>8099</serverport>
+		<dataBackup>backup/data-backup</dataBackup>
+	</server>
+
+
+	<dbStore class="com.briup.env.server.DBStoreImpl">
+		<driver>oracle.jdbc.driver.OracleDriver</driver>
+		<url>jdbc:oracle:thin:@127.0.0.1:1521:XE</url>
+		<userName>briup</userName>
+		<userPwd>briup</userPwd>
+	</dbStore>
+</environment>
